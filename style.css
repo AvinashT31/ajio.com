@@ -17,6 +17,8 @@
     width: 100%;
     height: 80px;
     box-shadow: 1px 1px 10px;
+    /* position: fixed; */
+    background-color: white;
 }
 
 #navbar-top-section ul{
@@ -149,8 +151,15 @@ color: gray;
     color: white;
 }
 
-#second section{
-    border: 1px solid black;
-    box-shadow: 1px 1px 5px;
+#section-compartment{
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 100px;
+    margin-top: 20px;
+}
+
+#tenth-section{
+    width: 100%;
+    height: 100%;
 }
 
