@@ -83,6 +83,39 @@ function login(event){
 }
 
 
+var GettingEmail;
+
+function forgetPassword(){
+    // alert('working');
+
+    var UserEmail = document.getElementById("email").value;
+    GettingEmail = UserEmail;
+
+    var DataFromLS = JSON.parse(localStorage.getItem("userData"));
+   
+
+    var flag = false;
+
+    for(var i =0; i < DataFromLS.length; i++){
+        if(DataFromLS[i].email === UserEmail){
+            flag = true;
+        }
+    }
+
+    if(flag === true){
+       var newCode = `<input type="password" id="password"/><br><button onclick = "newPassword()">Set New Password</button>`
+       var divFromHTML = document.getElementById("change");
+       divFromHTML.innerHTML = newCode;
+       alert(" Now Set new Password")
+    }
+    else{
+        alert("please check your email");
+    }
+  
+}
+
+
+
 
 
 
