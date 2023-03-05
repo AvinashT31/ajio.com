@@ -148,7 +148,25 @@ function newPassword(){
 }
 
 
+function AddProducts(event){
+    alert("working");
+    event.preventDefault();
 
+    var ProductImage  = document.getElementById("Image").value;
+    var ProductName  = document.getElementById("Name").value;
+    var ProductPrice  = document.getElementById("Price").value;
+
+    var ShowProduct = {Image : ProductImage, Name : ProductName, Price : ProductPrice }
+    console.log(ShowProduct, "ShowProduct");
+
+    var DataFromLS = JSON.parse(localStorage.getItem("DataList")) || [];
+    console.log(DataFromLS, "DataFromLS");
+    DataFromLS.push(ShowProduct);
+    
+
+    localStorage.setItem("DataList", JSON.stringify(DataFromLS));
+    
+}
 
 
 
