@@ -1,3 +1,5 @@
-Window.onload = function(){
+window.onload = function(){
     alert("working");
+    
 }
+
