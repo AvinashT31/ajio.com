@@ -163,6 +163,10 @@ function AddProducts(event){
     console.log(DataFromLS, "DataFromLS");
     DataFromLS.push(ShowProduct);
     
+    document.getElementById("Image").value = '';
+    document.getElementById("Name").value = '';
+    document.getElementById("Price").value = '';
+    
 
     localStorage.setItem("DataList", JSON.stringify(DataFromLS));
     
