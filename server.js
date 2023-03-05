@@ -108,17 +108,17 @@ function forgetPassword(event){
     console.log(GettingEmail, "GettingEmail");
 
     
-    // if(flag === true){
-    //    var newCode = `<input type="password" id="password"/><br>
-    //    <button onclick = "newPassword()">Set New Password</button>`
-    //    console.log(newCode, "newCode")
-    //    var divFromHTML = document.getElementById("change");
-    //    divFromHTML.innerHTML = newCode;
-    //    alert(" Now Set new Password")
-    // }
-    //  else{
-    //     alert("please check your email");
-    // }
+    if(flag === true){
+       var newCode = `<input type="password" id="password"/><br>
+       <button onclick = "newPassword()">Set New Password</button>`
+       console.log(newCode, "newCode")
+       var divFromHTML = document.getElementById("change");
+       divFromHTML.innerHTML = newCode;
+       alert(" Now Set new Password")
+    }
+     else{
+        alert("please check your email");
+    }
   
 }
 
