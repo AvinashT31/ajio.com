@@ -173,6 +173,18 @@ function AddProducts(event){
 }
 
 
+function Delete(){
+     alert("Working");
+    var GettingData = document.getElementById("DeleteFromLs");
+    console.log(GettingData, "GettingData");
+
+    var DeleteLS =  JSON.parse(localStorage.getItem("DataList"));
+    console.log(DeleteLS, "DeleteLS");
+    // DeleteLS.removeItem("13", Image);
+
+}
+
+
 
 
 
