@@ -44,15 +44,32 @@
                             <i class="fa-solid fa-bag-shopping"></i>
                         </div>
                     </div>
+                    <div id="logout">
+
+                    </div>
                 </div>
             </div>
         </div>
-        <div id="section-compartment">
-            
-        </div>
+       
     </div>
+    <script>
+        function check() {
+           var DataFromLS = JSON.parse(localStorage.getItem("current-user-ajio"));
+           if (DataFromLS) {
+               var divForlogout = document.getElementById("logout");
+               var logoutButton = `<button onclick = "logout()">logout</button>`
+               divForlogout.innerHTML = logoutButton;
+           }
+       }
+       check()
 
-    <script src="seller.js"></script>
+       function logout(){
+           localStorage.removeItem("current-user-ajio");
+           window.location.reload();
+           alert("logout Successfully");
+       }
+   </script>
+    
 </body>
 
 </html>

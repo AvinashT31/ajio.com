@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon"
-    <script src="https://kit.fontawesome.com/6d819e768f.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" <script src="https://kit.fontawesome.com/6d819e768f.js" crossorigin="anonymous">
+    </script>
     <link rel="stylesheet" href="register.css">
     <title>Myntra</title>
 </head>
@@ -60,7 +60,8 @@
                     <input id="UserConfirmPassword" type="Password" placeholder="Confirm Your Password">
                     <br>
                     <input type="Submit" value="Create Your Account">
-                   <a href="/login.html"><input style="text-align: center; cursor: pointer;" type="text" value="Login"></a> 
+                    <a href="/login.html"><input style="text-align: center; cursor: pointer;" type="text"
+                            value="Login"></a>
                 </div>
 
             </form>
@@ -68,6 +69,16 @@
     </div>
 
     <script src="server.js"></script>
+    <script>
+        window.onload = function () {
+            var DataFromLS = JSON.parse(localStorage.getItem("current-user-ajio"));
+            if (DataFromLS) {
+                window.location.href = "/index.html";
+                alert("already logged");
+            }
+        }
+    </script>
+
 </body>
 
 </html>

@@ -11,7 +11,7 @@ function Register(event){
 
     var Data = {Name: UserName, Number: UserNumber, Email: UserEmail, Password: UserPassword, ConfirmPassword: UserConfirmPassword}
 
-    var DataFromLS = JSON.parse(localStorage.getItem("DataList")) || [];
+    var DataFromLS = JSON.parse(localStorage.getItem("AjioData")) || [];
 
     var flag = false;
 
@@ -35,7 +35,7 @@ function Register(event){
      }    
      else{
         DataFromLS.push(Data);
-        localStorage.setItem("DataList", JSON.stringify(DataFromLS));
+        localStorage.setItem("AjioData", JSON.stringify(DataFromLS));
         document.getElementById("UserName").value = '';
         document.getElementById("UserNumber").value = '';
         document.getElementById("UserEmail").value = '';
@@ -57,7 +57,7 @@ function login(event){
     var UserEmail = document.getElementById("UserEmail").value;
     var UserPassword = document.getElementById("UserPassword").value;
 
-    var DataFromLS = JSON.parse(localStorage.getItem("DataList"));
+    var DataFromLS = JSON.parse(localStorage.getItem("AjioData"));
     console.log(DataFromLS, "DataFromLS");
 
     var flag = false;
@@ -72,6 +72,12 @@ function login(event){
 
      document.getElementById("UserEmail").value = '';
      document.getElementById("UserPassword").value = '';
+
+     var User = {};
+     User["Current-user-email"] = UserEmail;
+     console.log(User, "User")
+     localStorage.setItem("current-user-ajio", JSON.stringify(User));
+     
      window.location.href = "/index.html";
      alert("login successfully");
      
@@ -94,7 +100,7 @@ function forgetPassword(event){
     GettingEmail = forgetPassword;
     console.log(forgetPassword,"forgetPassword");
 
-    var DataFromLS = JSON.parse(localStorage.getItem("DataList"));
+    var DataFromLS = JSON.parse(localStorage.getItem("AjioData"));
     console.log(DataFromLS,  "DataFromLS");
 
     var flag = false;
@@ -130,7 +136,7 @@ function newPassword(){
 
     var userPassword = document.getElementById("password").value;
     console.log(userPassword, "userPassword");
-    var dataFromLS = JSON.parse(localStorage.getItem("DataList"));
+    var dataFromLS = JSON.parse(localStorage.getItem("AjioData"));
     console.log(dataFromLS, "dataFromLS");
 
     for(var i=0; i < dataFromLS.length; i++){
@@ -140,7 +146,7 @@ function newPassword(){
     }
     // console.log(dataFromLS, "data");
 
-    localStorage.setItem("DataList", JSON.stringify(dataFromLS));
+    localStorage.setItem("AjioData", JSON.stringify(dataFromLS));
     GettingEmail = '';
     window.location.href = "/login.html";
     alert("password Change Successfully");
@@ -148,41 +154,6 @@ function newPassword(){
 }
 
 
-function AddProducts(event){
-    alert("working");
-    event.preventDefault();
-
-    var ProductImage  = document.getElementById("Image").value;
-    var ProductName  = document.getElementById("Name").value;
-    var ProductPrice  = document.getElementById("Price").value;
-
-    var ShowProduct = {Image : ProductImage, Name : ProductName, Price : ProductPrice }
-    console.log(ShowProduct, "ShowProduct");
-
-    var DataFromLS = JSON.parse(localStorage.getItem("DataList")) || [];
-    console.log(DataFromLS, "DataFromLS");
-    DataFromLS.push(ShowProduct);
-    
-    document.getElementById("Image").value = '';
-    document.getElementById("Name").value = '';
-    document.getElementById("Price").value = '';
-    
-
-    localStorage.setItem("DataList", JSON.stringify(DataFromLS));
-    
-}
-
-
-function Delete(){
-     alert("Working");
-    var GettingData = document.getElementById("DeleteFromLs");
-    console.log(GettingData, "GettingData");
-
-    var DeleteLS =  JSON.parse(localStorage.getItem("DataList"));
-    console.log(DeleteLS, "DeleteLS");
-    // DeleteLS.removeItem("13", Image);
-
-}
 
 
 
