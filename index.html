@@ -22,15 +22,15 @@
             </div>
             <div id="navbar-section">
                 <div>
-                    <img src="https://assets.ajio.com/static/img/Ajio-Logo.svg" alt="logo">
+                  <a href="mens(seller).html"><img src="https://assets.ajio.com/static/img/Ajio-Logo.svg" alt="logo"></a>  
                 </div>
                 <div>
                     <ul>
-                        <li><a href="mens.html">MEN</a> </li>
-                        <li><a href="blank">WOMEN</a> </li>
-                        <li><a href="blank">KIDS</a> </li>
-                        <li><a href="blank">INDIE</a> </li>
-                        <li><a href="blank">HOME AND KITCHEN</a> </li>
+                        <li><a href="mens(showproduct).html">MEN</a> </li>
+                        <li><a href="mens(showproduct).html">WOMEN</a> </li>
+                        <li><a href="mens(showproduct).html">KIDS</a> </li>
+                        <li><a href="mens(showproduct).html">INDIE</a> </li>
+                        <li><a href="mens(showproduct).html">HOME AND KITCHEN</a> </li>
                     </ul>
                     <div>
                         <input type="text" placeholder="Search AJIO">
@@ -41,7 +41,7 @@
                             <i class="fa-solid fa-heart"></i>
                         </div>
                         <div>
-                            <i class="fa-solid fa-bag-shopping"></i>
+                          <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>  
                         </div>
                     </div>
                     <div id="logout">
@@ -49,27 +49,63 @@
                     </div>
                 </div>
             </div>
+            <div class="second-section">
+                <img src="https://assets.ajio.com/cms/AJIO/WEB/16062023-UHP-BBS-AjioAfterParty-D-Mainbanner.gif"
+                    alt="">
+            </div>
+            <div class="third-section">
+                <img src="https://assets.ajio.com/cms/AJIO/WEB/advavqe3qr3.png" alt="">
+            </div>
+            <div class="fourth-section">
+                <img class="img" src="https://assets.ajio.com/cms/AJIO/WEB/02062023-UHP-BBS-D-Sponsorbrands-Sectionheader.jpg" alt="">
+            </div>
+            <div class="fifth-section">
+                <img class="img" src="https://assets.ajio.com/cms/AJIO/WEB/19062023-UHP-D-Sponsor-Campus-Upto50%20-%20Copy.jpg" alt="">
+            </div>
+            <div class="sixth-section">
+                <img class="img" src="https://assets.ajio.com/cms/AJIO/WEB/05052023-UHP-Summerstealontopbrands-D-Sectionheader.jpg" alt="">
+            </div>
+            <div class="seven-section">
+                <img class="img" src="https://assets.ajio.com/cms/AJIO/WEB/19062023-UHP-D-Top-P4-ZaveriPearls-min80.jpg" alt="">
+            </div>
+            <div class="eight-section">
+                <img class="img" src="https://assets.ajio.com/cms/AJIO/WEB/13062023-UHP-D-WardrobeMusthaves-Header.jpg" alt="">
+            </div>
+            <div class="nine-section">
+                <img class="img" src="https://assets.ajio.com/cms/AJIO/WEB/19062023-UHP-D-WardrobeWomen-USPAPepeJeans-4070.jpg" alt="">
+            </div>
+            <div class="ten-section">
+                <img class="img" src="https://assets.ajio.com/cms/AJIO/WEB/01062023-UHP-Sponsorbrands-D-Sectionheader.jpg" alt="">
+            </div>
+            <div class="eleone-section">
+                <img class="img" src="https://assets.ajio.com/cms/AJIO/WEB/01062023-UHP-Newonthebestsellers-D-P4-Footwear-Upto80.jpg" alt="">
+            </div>
+            <div class="tweleth-section">
+                <img class="img" src="https://assets.ajio.com/cms/AJIO/WEB/08032022-D-unisex-ajiocares-strip%20new%20d.jpg" alt="">
+            </div>
+            <div class="thirteen-section">
+                <img class="img" src="./img//web-screenshot-12-02-2023.jpg" alt="">
+            </div>
         </div>
-       
     </div>
     <script>
         function check() {
-           var DataFromLS = JSON.parse(localStorage.getItem("current-user-ajio"));
-           if (DataFromLS) {
-               var divForlogout = document.getElementById("logout");
-               var logoutButton = `<button onclick = "logout()">logout</button>`
-               divForlogout.innerHTML = logoutButton;
-           }
-       }
-       check()
+            var DataFromLS = JSON.parse(localStorage.getItem("current-user-ajio"));
+            if (DataFromLS) {
+                var divForlogout = document.getElementById("logout");
+                var logoutButton = `<button onclick = "logout()">logout</button>`
+                divForlogout.innerHTML = logoutButton;
+            }
+        }
+        check()
 
-       function logout(){
-           localStorage.removeItem("current-user-ajio");
-           window.location.reload();
-           alert("logout Successfully");
-       }
-   </script>
-    
+        function logout() {
+            localStorage.removeItem("current-user-ajio");
+            window.location.reload();
+            alert("logout Successfully");
+        }
+    </script>
+
 </body>
 
 </html>
