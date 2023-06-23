@@ -15,7 +15,7 @@
         <div id="navbar">
             <div id="navbar-top-section">
                 <ul>
-                    <li><a href="login.html">Sign In/Join AJIO</a> </li>
+                    <li id="logout"><a href="login.html">Sign In/Join AJIO</a> </li>
                     <li><a href="blank">Customer Care</a> </li>
                     <li><a style="color: white" href="blank">Visit AJIOLUXE</a> </li>
                 </ul>
@@ -43,9 +43,6 @@
                         <div>
                           <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>  
                         </div>
-                    </div>
-                    <div id="logout">
-
                     </div>
                 </div>
             </div>
@@ -93,6 +90,8 @@
             var DataFromLS = JSON.parse(localStorage.getItem("current-user-ajio"));
             if (DataFromLS) {
                 var divForlogout = document.getElementById("logout");
+                console.log(divForlogout, "divForlogout");
+
                 var logoutButton = `<button onclick = "logout()">logout</button>`
                 divForlogout.innerHTML = logoutButton;
             }
@@ -102,6 +101,7 @@
         function logout() {
             localStorage.removeItem("current-user-ajio");
             window.location.reload();
+            window.location.href = "/index.html";
             alert("logout Successfully");
         }
     </script>

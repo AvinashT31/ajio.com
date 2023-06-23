@@ -237,6 +237,16 @@ height: 400px;
     height: 100%;
 }
 
+#logout button{
+    text-decoration: none;
+    margin-right: 21px;
+    color: gray;
+    width: 60px;
+    border: none;
+    outline: none;
+    background-color: white;
+}
+
 
 
 
